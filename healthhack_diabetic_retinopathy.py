@@ -267,7 +267,10 @@ plt.ylabel('True')
 plt.title('Confusion Matrix')
 plt.show()
 
-pip install streamlit tensorflow pillow boto3
+import subprocess
+
+subprocess.run(["pip", "install", "streamlit", "tensorflow", "pillow", "boto3"])
+
 
 import tensorflow as tf
 
