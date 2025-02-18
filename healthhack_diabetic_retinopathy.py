@@ -7,8 +7,14 @@ Original file is located at
     https://colab.research.google.com/drive/1kxJDEZdQ00qOjvtxNYpvWAAjX9GX7Bka
 """
 
-from google.colab import drive
-drive.mount('/content/drive')
+import sys
+
+if "google.colab" in sys.modules:
+    from google.colab import drive
+    drive.mount('/content/drive')
+else:
+    print("Not running in Google Colab. Skipping drive.mount().")
+
 
 import pandas as pd
 import zipfile
