@@ -44,7 +44,9 @@ with zipfile.ZipFile(zip_path, 'r') as z:
             content = f.read()
             print(f"{file} - Size: {len(content)} bytes")
 
-!unzip '/content/drive/MyDrive/B. Disease Grading.zip' -d '/content/extracted'
+import subprocess
+
+subprocess.run(["unzip", "/content/drive/MyDrive/B. Disease Grading.zip", "-d", "/content/extracted"])
 
 # Define image size & batch size
 IMG_SIZE = (224, 224)
